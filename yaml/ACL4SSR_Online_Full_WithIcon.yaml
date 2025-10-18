@@ -391,6 +391,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  Adobe:
+    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Adobe.list
+    path: ./ruleset/Adobe.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   Apple:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Apple.list
     path: ./ruleset/Apple.list
@@ -531,13 +538,7 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  Adobe:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Adobe.list
-    path: ./ruleset/Adobe.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
+
 rules:
   - "RULE-SET,LocalAreaNetwork,全球直连"
   - "RULE-SET,UnBan,全球直连"
