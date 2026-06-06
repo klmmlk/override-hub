@@ -10,6 +10,7 @@ proxy-groups:
       - 日本节点
       - 美国节点
       - 韩国节点
+      - CF节点
       - 手动切换
       - DIRECT
   - name: 手动切换
@@ -34,6 +35,7 @@ proxy-groups:
       - 日本节点
       - 美国节点
       - 韩国节点
+      - CF节点
       - 手动切换
       - DIRECT
   - name: OpenAi
@@ -48,6 +50,7 @@ proxy-groups:
       - 日本节点
       - 美国节点
       - 韩国节点
+      - CF节点
       - 手动切换
       - DIRECT
   - name: 油管视频
@@ -62,6 +65,7 @@ proxy-groups:
       - 日本节点
       - 美国节点
       - 韩国节点
+      - CF节点
       - 手动切换
       - DIRECT
   - name: 奈飞视频
@@ -77,23 +81,9 @@ proxy-groups:
       - 日本节点
       - 美国节点
       - 韩国节点
+      - CF节点
       - 手动切换
       - DIRECT
-  - name: 巴哈姆特
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png
-    type: select
-    proxies:
-      - 台湾节点
-      - 节点选择
-      - 手动切换
-      - DIRECT
-  - name: 哔哩哔哩
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili.png
-    type: select
-    proxies:
-      - 全球直连
-      - 台湾节点
-      - 香港节点
   - name: 国外媒体
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png
     type: select
@@ -106,17 +96,22 @@ proxy-groups:
       - 日本节点
       - 美国节点
       - 韩国节点
+      - CF节点
       - 手动切换
       - DIRECT
-  - name: 国内媒体
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/DomesticMedia.png
+  - name: 搞基平台
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png
     type: select
     proxies:
       - DIRECT
+      - 节点选择
+      - 美国节点
       - 香港节点
       - 台湾节点
       - 狮城节点
       - 日本节点
+      - 韩国节点
+      - CF节点
       - 手动切换
   - name: 谷歌FCM
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png
@@ -130,6 +125,7 @@ proxy-groups:
       - 狮城节点
       - 日本节点
       - 韩国节点
+      - CF节点
       - 手动切换
   - name: 微软Bing
     icon: https://testingcf.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/bing.png
@@ -143,6 +139,7 @@ proxy-groups:
       - 狮城节点
       - 日本节点
       - 韩国节点
+      - CF节点
       - 手动切换
   - name: 微软云盘
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/OneDrive.png
@@ -156,6 +153,7 @@ proxy-groups:
       - 狮城节点
       - 日本节点
       - 韩国节点
+      - CF节点
       - 手动切换
   - name: 微软服务
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
@@ -169,6 +167,7 @@ proxy-groups:
       - 狮城节点
       - 日本节点
       - 韩国节点
+      - CF节点
       - 手动切换
   - name: 苹果服务
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png
@@ -182,6 +181,7 @@ proxy-groups:
       - 狮城节点
       - 日本节点
       - 韩国节点
+      - CF节点
       - 手动切换
   - name: 游戏平台
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
@@ -195,6 +195,7 @@ proxy-groups:
       - 狮城节点
       - 日本节点
       - 韩国节点
+      - CF节点
       - 手动切换
   - name: 网易音乐
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netease_Music.png
@@ -237,6 +238,7 @@ proxy-groups:
       - 日本节点
       - 美国节点
       - 韩国节点
+      - CF节点
       - 手动切换
   - name: 香港节点
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png
@@ -285,6 +287,11 @@ proxy-groups:
     include-all: true
     filter: (?i)NF|奈飞|解锁|Netflix|NETFLIX|Media
     type: select
+  - name: CF节点
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png
+    include-all: true
+    filter: (?i)CF
+    type: select
   - name: GLOBAL
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png
     include-all: true
@@ -297,8 +304,6 @@ proxy-groups:
       - OpenAi
       - 油管视频
       - 奈飞视频
-      - 巴哈姆特
-      - 哔哩哔哩
       - 国外媒体
       - 国内媒体
       - 谷歌FCM
@@ -319,6 +324,7 @@ proxy-groups:
       - 狮城节点
       - 韩国节点
       - 奈飞节点
+      - CF节点
 
 rule-providers:
   LocalAreaNetwork:
@@ -475,34 +481,6 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  Bahamut:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Bahamut.list
-    path: ./ruleset/Bahamut.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  BilibiliHMT:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/BilibiliHMT.list
-    path: ./ruleset/BilibiliHMT.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  Bilibili:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Bilibili.list
-    path: ./ruleset/Bilibili.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  ChinaMedia:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaMedia.list
-    path: ./ruleset/ChinaMedia.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
   ProxyMedia:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ProxyMedia.list
     path: ./ruleset/ProxyMedia.list
@@ -538,6 +516,14 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  Github:
+    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Github.list
+    path: ./ruleset/Github.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+    
 
 rules:
   - "RULE-SET,LocalAreaNetwork,全球直连"
@@ -562,14 +548,11 @@ rules:
   - "RULE-SET,Nintendo,游戏平台"
   - "RULE-SET,YouTube,油管视频"
   - "RULE-SET,Netflix,奈飞视频"
-  - "RULE-SET,Bahamut,巴哈姆特"
-  - "RULE-SET,BilibiliHMT,哔哩哔哩"
-  - "RULE-SET,Bilibili,哔哩哔哩"
-  - "RULE-SET,ChinaMedia,国内媒体"
   - "RULE-SET,ProxyMedia,国外媒体"
   - "RULE-SET,ProxyGFWlist,节点选择"
   - "RULE-SET,ChinaDomain,全球直连"
   - "RULE-SET,ChinaCompanyIp,全球直连"
   - "RULE-SET,Download,全球直连"
   - "GEOIP,CN,全球直连"
+  - "RULE-SET,Github,搞基平台"
   - "MATCH,漏网之鱼"
